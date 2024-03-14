@@ -20,11 +20,11 @@ def test_ingredient():
     assert ingredient1 == ingredient2
     assert ingredient1 != ingredient3
 
-    hash_equal_for_equal_objects = hash(ingredient1) == hash(ingredient2)
-    assert hash_equal_for_equal_objects, "Hashes should be equal for equal objects"
+    equal_objects = hash(ingredient1) == hash(ingredient2)
+    assert equal_objects, "Hashes should be equal for equal objects"
 
-    hash_different_for_different_objects = hash(ingredient1) != hash(ingredient3)
-    assert hash_different_for_different_objects, "Hashes should be different for different objects"
+    different_objects = hash(ingredient1) != hash(ingredient3)
+    assert different_objects, "Hashes should be different for different objects"
 
     ingredient = Ingredient("Potato")
     assert ingredient.name == "Potato"
